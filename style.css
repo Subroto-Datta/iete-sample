@@ -1,0 +1,103 @@
+/*
+=====================================================================
+IMPORTANT: XIROD FONT SETUP
+=====================================================================
+1. Download the Xirod font.
+2. Convert it to a web-friendly format like .woff2.
+3. Place the `xirod.woff2` file into your `/assets/fonts/` directory.
+4. The @font-face rule below is now active and will load the font.
+   The font will NOT render until you complete the steps above.
+=====================================================================
+*/
+
+@font-face {
+    font-family: 'Xirod';
+    src: url('assets/fonts/xirod.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Custom CSS for animations and theme */
+:root {
+    --bg-base: #F9F9F9;
+    --text-dark: #222222;
+    --accent-blue: #4CC9F0;
+    --accent-magenta: #F72585;
+    /* Font variables for a flexible typography system */
+    --font-display: 'Xirod', sans-serif; 
+    --font-header: 'Goldman', cursive;
+    --font-body: 'Aboreto', cursive;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-base);
+    color: var(--text-dark);
+    overflow: hidden; /* Hide scrollbars during splash screen */
+}
+
+/* Splash screen fade-out animation */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; visibility: hidden; }
+}
+
+.splash-screen.fade-out {
+    animation: fadeOut 1s ease-out forwards;
+}
+
+/* Text reveal animation */
+.reveal-text { font-family: var(--font-display); }
+.reveal-text span {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    text-shadow: 2px 2px 8px rgba(247, 37, 133, 0.3);
+}
+@keyframes reveal { to { opacity: 1; transform: translateY(0); } }
+
+/* Progress bar animation */
+#progress-bar {
+    transform-origin: left;
+    transition: transform 3s ease-in-out;
+}
+
+/* Welcome screen styles */
+.welcome-line { will-change: transform; }
+
+/* Intro section animation prep */
+.intro-element {
+    opacity: 0;
+    transform: translateY(30px);
+    will-change: opacity, transform;
+}
+
+/* Cyberpunk Button Style */
+.cyber-btn {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 2rem;
+    color: var(--accent-magenta);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 1rem;
+    font-family: var(--font-header);
+    overflow: hidden;
+    transition: 0.5s;
+    text-decoration: none;
+    border: 2px solid var(--accent-magenta);
+}
+.cyber-btn:hover {
+    background: var(--accent-magenta);
+    color: var(--bg-base);
+    box-shadow: 0 0 5px var(--accent-magenta),
+                0 0 25px var(--accent-magenta),
+                0 0 50px var(--accent-magenta),
+                0 0 100px var(--accent-magenta);
+}
+
+/* Transition Overlay */
+#transition-overlay {
+    transform: scaleY(0);
+    transform-origin: bottom;
+}

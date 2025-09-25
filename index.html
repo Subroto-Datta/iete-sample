@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IETE KJSIT - The Official Hub</title>
+
+    <meta name="description" content="The official website for the IETE Technical Committee at KJSIT. Explore our events, meet the team, and join our community of innovators.">
+    <meta name="keywords" content="IETE, KJSIT, TechFest, Renaissance, Engineering, Technology, Events, Workshops">
+    <meta name="author" content="IETE KJSIT Team">
+
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Goldman:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div id="transition-overlay" class="fixed top-0 left-0 w-full h-full bg-[var(--accent-blue)] z-[100] pointer-events-none"></div>
+
+    <div id="splash-screen" class="splash-screen fixed top-0 left-0 w-full h-full bg-[var(--bg-base)] flex flex-col items-center justify-center z-50">
+        <div class="flex flex-col items-center">
+            <h1 class="reveal-text text-6xl md:text-8xl font-bold tracking-wider mb-4 text-[var(--text-dark)]">
+                <span style="animation-delay: 0.2s;">IETE</span>
+                <span style="animation-delay: 0.4s;">KJSIT</span>
+            </h1>
+            <p id="loading-percentage" class="text-lg font-medium mb-4 text-gray-600" style="font-family: var(--font-header);">0%</p>
+            <div class="w-48 h-1 bg-gray-200 rounded-full overflow-hidden">
+                <div id="progress-bar" class="h-full bg-[var(--accent-blue)]" style="transform: scaleX(0);"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="three-canvas-container" class="fixed top-0 left-0 w-full h-full z-0 opacity-0 transition-opacity duration-1000"></div>
+
+    <main id="content-container" class="relative z-10 opacity-0 transition-opacity duration-1000">
+        
+        <section id="welcome-screen" class="h-screen relative flex items-center justify-center text-center page-section">
+            <div class="welcome-text-container">
+                <div class="welcome-line">
+                    <h1 class="text-5xl md:text-8xl" style="font-family: var(--font-display);">WELCOME TO</h1>
+                </div>
+                <div class="welcome-line">
+                    <h1 class="text-5xl md:text-8xl" style="font-family: var(--font-display);">IETE KJSIT</h1>
+                </div>
+            </div>
+        </section>
+
+        <section id="introduction" class="min-h-screen p-8 bg-[var(--bg-base)] relative flex items-center justify-center page-section">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="intro-element text-4xl md:text-6xl mb-6" style="font-family: var(--font-header);">
+                    Where Innovation Converges
+                </h2>
+                <p class="intro-element text-lg md:text-xl mb-12 leading-relaxed">
+                    We are the IETE Student Chapter of KJSIT—a nexus for creators, thinkers, and pioneers. We transcend the conventional, pushing the boundaries of technology and engineering to build a smarter tomorrow. This is our digital hub.
+                </p>
+                <a href="#renaissance" class="intro-element cyber-btn">
+                    Explore Our World
+                </a>
+            </div>
+        </section>
+
+        <section id="renaissance" class="min-h-screen py-20 px-8 bg-[var(--bg-base)] relative page-section">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl md:text-6xl" style="font-family: var(--font-header);">
+                    Renaissance 2025
+                </h2>
+                <p class="renaissance-element text-xl md:text-2xl mt-2 mb-8 text-[var(--accent-blue)]" style="font-family: var(--font-body);">
+                    IETE KJSIT's Arena of Innovation
+                </p>
+        
+                <p class="renaissance-element text-lg max-w-3xl mx-auto leading-relaxed mb-16">
+                    Get ready to plug in! For this year's annual tech festival, IETE KJSIT is unleashing a supercharged lineup of events. We're transforming Renaissance into a battleground of brilliance where code meets creativity. Whether you're here to conquer complex circuits or outsmart the competition in challenges of pure wit, we've built an arena for you. The future is calling—are you ready to answer?
+                </p>
+        
+                <div class="renaissance-element">
+                    <h3 class="text-3xl md:text-4xl text-center my-12" style="font-family: var(--font-header); color: var(--accent-magenta);">Technical Events</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-lg text-left border-t-4 border-[var(--accent-magenta)]">
+                            <h4 class="text-2xl mb-2" style="font-family: var(--font-header);">Code Reverse</h4>
+                            <p class="text-gray-700" style="font-family: var(--font-body);">Participants will be given the output and must write the code to produce it within a strict time limit. A true test of logic and efficiency.</p>
+                        </div>
+        
+                        <div class="bg-white p-6 rounded-lg shadow-lg text-left border-t-4 border-[var(--accent-magenta)]">
+                            <h4 class="text-2xl mb-2" style="font-family: var(--font-header);">Prompt Showdown</h4>
+                            <p class="text-gray-700" style="font-family: var(--font-body);">An AI vs. AI challenge! Given a problem, participants compete using AI tools like ChatGPT to generate the best story, design, or solution. The most creative and effective output wins.</p>
+                        </div>
+        
+                        <div class="bg-white p-6 rounded-lg shadow-lg text-left border-t-4 border-[var(--accent-magenta)]">
+                            <h4 class="text-2xl mb-2" style="font-family: var(--font-header);">Digital Sherlock</h4>
+                            <p class="text-gray-700" style="font-family: var(--font-body);">Solve a series of "digital crime" scenarios by finding clues hidden in fake emails, image metadata, websites, or QR codes. A cyber-forensics challenge for teams.</p>
+                        </div>
+        
+                        <div class="bg-white p-6 rounded-lg shadow-lg text-left border-t-4 border-[var(--accent-magenta)]">
+                            <h4 class="text-2xl mb-2" style="font-family: var(--font-header);">Code Golf</h4>
+                            <p class="text-gray-700" style="font-family: var(--font-body);">The ultimate test of brevity. Solve a problem using the shortest possible code. Like golf, the lowest score (fewest characters) wins. Play solo or in teams of up to 4.</p>
+                        </div>
+        
+                    </div>
+                </div>
+        
+                <div class="renaissance-element">
+                    <h3 class="text-3xl md:text-4xl text-center my-12" style="font-family: var(--font-header); color: var(--accent-blue);">Non-Technical Events</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        
+                        <div class="bg-white p-6 rounded-lg shadow-lg text-left border-t-4 border-[var(--accent-blue)]">
+                            <h4 class="text-2xl mb-2" style="font-family: var(--font-header);">IPL Auction (Simulator)</h4>
+                            <p class="text-gray-700" style="font-family: var(--font-body);">Step into the shoes of a franchise owner. Strategize, bid, and build your dream team in this thrilling simulation of the iconic cricket auction.</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-lg text-left border-t-4 border-[var(--accent-blue)]">
+                            <h4 class="text-2xl mb-2" style="font-family: var(--font-header);">Gaming Zone</h4>
+                            <p class="text-gray-700" style="font-family: var(--font-body);">Unleash your competitive spirit on the PS5 with high-octane FIFA matches and blistering F1 races. Settle scores and claim bragging rights on the virtual field and track.</p>
+                        </div>
+        
+                        <div class="bg-white p-6 rounded-lg shadow-lg text-left border-t-4 border-[var(--accent-blue)]">
+                            <h4 class="text-2xl mb-2" style="font-family: var(--font-header);">Alice in Borderland</h4>
+                            <p class="text-gray-700" style="font-family: var(--font-body);">Enter a world of high-stakes games across four unique rooms: <br>
+                                <strong>Blindfolded Maze:</strong> Navigate a maze guided only by your teammate's voice. <br>
+                                <strong>Mafia:</strong> Uncover the hidden mafia before they take over. <br>
+                                <strong>Housie:</strong> A classic game of luck and patterns. <br>
+                                <strong>Geometric Dumb Charades:</strong> Act out geometric terms without a sound.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-lg text-left border-t-4 border-[var(--accent-blue)]">
+                            <h4 class="text-2xl mb-2" style="font-family: var(--font-header);">SOCIAL BUGS</h4>
+                            <p class="text-gray-700" style="font-family: var(--font-body);">A trio of challenges designed for social media masters: <br>
+                                <strong>Reel o Mania:</strong> Create a viral 15-30 second reel using mystery objects. <br>
+                                <strong>Aamchi Mumbai:</strong> A rapid-fire quiz about the city of dreams. <br>
+                                <strong>MemoLogic:</strong> A fun challenge to test your memory and logic skills.
+                            </p>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section id="events" class="min-h-screen p-8 bg-[var(--bg-base)] relative page-section">
+             <h2 class="text-4xl font-bold text-center" style="font-family: var(--font-header);">Events</h2>
+        </section>
+        <section id="team" class="min-h-screen py-20 px-8 bg-[var(--bg-base)] relative page-section">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl md:text-6xl mb-16" style="font-family: var(--font-header);">
+                    Meet The Team
+                </h2>
+        
+                <h3 class="text-3xl md:text-4xl text-center mb-10" style="font-family: var(--font-header); color: var(--accent-blue);">Leadership</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-4xl mx-auto mb-20">
+                    
+                    <div class="team-card bg-white rounded-xl shadow-lg p-6 text-center transform hover:scale-105 transition-transform duration-300 ease-in-out flex flex-col items-center">
+                        <img class="w-36 h-36 rounded-full mx-auto mb-4 object-cover border-4 border-[var(--accent-magenta)]" src="https://via.placeholder.com/150" alt="Chairperson Photo">
+                        <h4 class="text-2xl" style="font-family: var(--font-header);">Manjiri Kadam</h4>
+                        <p class="text-lg text-[var(--accent-magenta)] mb-4" style="font-family: var(--font-body);">Chairperson</p>
+                        <div class="flex justify-center space-x-4 mt-auto">
+                            <a href="#" class="text-gray-600 hover:text-black transition-colors" aria-label="LinkedIn">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-black transition-colors" aria-label="GitHub">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.164 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+        
+                    <div class="team-card bg-white rounded-xl shadow-lg p-6 text-center transform hover:scale-105 transition-transform duration-300 ease-in-out flex flex-col items-center">
+                        <img class="w-36 h-36 rounded-full mx-auto mb-4 object-cover border-4 border-[var(--accent-blue)]" src="https://via.placeholder.com/150" alt="Vice Chairperson Photo">
+                        <h4 class="text-2xl" style="font-family: var(--font-header);">Kislay Gupta</h4>
+                        <p class="text-lg text-[var(--accent-magenta)] mb-4" style="font-family: var(--font-body);">Vice Chairperson</p>
+                        <div class="flex justify-center space-x-4 mt-auto">
+                            <a href="#" class="text-gray-600 hover:text-black transition-colors" aria-label="LinkedIn">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-black transition-colors" aria-label="GitHub">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.164 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        
+                <h3 class="text-3xl md:text-4xl text-center mb-10" style="font-family: var(--font-header); color: var(--accent-blue);">Core Committee</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    
+                    <div class="team-card bg-white rounded-xl shadow-lg p-6 text-center transform hover:scale-105 transition-transform duration-300 ease-in-out flex flex-col items-center">
+                        <img class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-gray-200" src="https://via.placeholder.com/150" alt="Team Member Photo">
+                        <h4 class="text-xl" style="font-family: var(--font-header);">Aaditi Indamdar</h4>
+                        <p class="text-[var(--accent-magenta)] mb-4" style="font-family: var(--font-body);">Secretary</p>
+                        <div class="flex justify-center space-x-4 mt-auto">
+                            <a href="#" class="text-gray-600 hover:text-black transition-colors" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg></a>
+                            <a href="#" class="text-gray-600 hover:text-black transition-colors" aria-label="GitHub"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.164 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg></a>
+                        </div>
+                    </div>
+
+                    <div class="team-card bg-white rounded-xl shadow-lg p-6 text-center transform hover:scale-105 transition-transform duration-300 ease-in-out flex flex-col items-center">
+                        <img class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-gray-200" src="https://via.placeholder.com/150" alt="Team Member Photo">
+                        <h4 class="text-xl" style="font-family: var(--font-header);">Pooja Shah</h4>
+                        <p class="text-[var(--accent-magenta)] mb-4" style="font-family: var(--font-body);">Treasurer</p>
+                        <div class="flex justify-center space-x-4 mt-auto">
+                            <a href="#" class="text-gray-600 hover:text-black transition-colors" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg></a>
+                            <a href="#" class="text-gray-600 hover:text-black transition-colors" aria-label="GitHub"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.164 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg></a>
+                        </div>
+                    </div>
+
+                    <div class="team-card bg-white rounded-xl shadow-lg p-6 text-center transform hover:scale-105 transition-transform duration-300 ease-in-out flex flex-col items-center">
+                        <img class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-gray-200" src="https://via.placeholder.com/150" alt="Team Member Photo">
+                        <h4 class="text-xl" style="font-family: var(--font-header);">Ayesha Shaikh</h4>
+                        <p class="text-[var(--accent-magenta)] mb-4" style="font-family: var(--font-body);">Digital Media Manager</p>
+                        <div class="flex justify-center space-x-4 mt-auto">
+                            <a href="#" class="text-gray-600 hover:text-black transition-colors" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg></a>
+                            <a href="#" class="text-gray-600 hover:text-black transition-colors" aria-label="GitHub"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.164 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg></a>
+                        </div>
+                    </div>
+
+                    <div class="team-card bg-white rounded-xl shadow-lg p-6 text-center transform hover:scale-105 transition-transform duration-300 ease-in-out flex flex-col items-center">
+                        <img class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-gray-200" src="https://via.placeholder.com/150" alt="Team Member Photo">
+                        <h4 class="text-xl" style="font-family: var(--font-header);">Subroto Datta</h4>
+                        <p class="text-[var(--accent-magenta)] mb-4" style="font-family: var(--font-body);">Chief Technical Officer</p>
+                        <div class="flex justify-center space-x-4 mt-auto">
+                            <a href="#" class="text-gray-600 hover:text-black transition-colors" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg></a>
+                            <a href="#" class="text-gray-600 hover:text-black transition-colors" aria-label="GitHub"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.164 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg></a>
+                        </div>
+                    </div>
+
+                    <div class="team-card bg-white rounded-xl shadow-lg p-6 text-center transform hover:scale-105 transition-transform duration-300 ease-in-out flex flex-col items-center">
+                        <img class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-gray-200" src="https://via.placeholder.com/150" alt="Team Member Photo">
+                        <h4 class="text-xl" style="font-family: var(--font-header);">Sainath Shobhane</h4>
+                        <p class="text-[var(--accent-magenta)] mb-4" style="font-family: var(--font-body);">Chief Executions Officer</p>
+                        <div class="flex justify-center space-x-4 mt-auto">
+                            <a href="#" class="text-gray-600 hover:text-black transition-colors" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg></a>
+                            <a href="#" class="text-gray-600 hover:text-black transition-colors" aria-label="GitHub"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.164 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg></a>
+                        </div>
+                    </div>
+
+                    <div class="team-card bg-white rounded-xl shadow-lg p-6 text-center transform hover:scale-105 transition-transform duration-300 ease-in-out flex flex-col items-center">
+                        <img class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-2 border-gray-200" src="https://via.placeholder.com/150" alt="Team Member Photo">
+                        <h4 class="text-xl" style="font-family: var(--font-header);">Pratul Jagtap</h4>
+                        <p class="text-[var(--accent-magenta)] mb-4" style="font-family: var(--font-body);">Public Relations Officer</p>
+                        <div class="flex justify-center space-x-4 mt-auto">
+                            <a href="#" class="text-gray-600 hover:text-black transition-colors" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg></a>
+                            <a href="#" class="text-gray-600 hover:text-black transition-colors" aria-label="GitHub"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.164 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg></a>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+        <section id="about-us" class="min-h-screen py-20 px-8 bg-[var(--bg-base)] relative page-section text-center">
+            <div class="container mx-auto">
+        
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-4xl md:text-6xl mb-4" style="font-family: var(--font-header);">
+                        Our Story
+                    </h2>
+                    <p class="about-element text-xl md:text-2xl mb-12 text-[var(--accent-blue)]" style="font-family: var(--font-body);">
+                        The Genesis of Innovation at KJSIT
+                    </p>
+                    <p class="about-element text-lg text-left md:text-center leading-relaxed mb-16">
+                        Born from a vision to create a hub for technical excellence, the IETE KJSIT chapter was founded by a small group of passionate students and faculty. Our initial goal was simple: to bridge the gap between classroom theory and real-world application, creating a space where curiosity could thrive and innovation had no limits.
+                    </p>
+                </div>
+        
+                <div id="stats-section" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20 text-center">
+                    <div class="about-element bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-5xl font-bold text-[var(--accent-magenta)]" style="font-family: var(--font-header);">
+                            <span class="stat-number" data-final-value="50">0</span>+
+                        </h3>
+                        <p class="text-gray-600 mt-2" style="font-family: var(--font-body);">Events Hosted</p>
+                    </div>
+                    <div class="about-element bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-5xl font-bold text-[var(--accent-magenta)]" style="font-family: var(--font-header);">
+                            <span class="stat-number" data-final-value="5000">0</span>+
+                        </h3>
+                        <p class="text-gray-600 mt-2" style="font-family: var(--font-body);">Participants Engaged</p>
+                    </div>
+                </div>
+        
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="about-element text-3xl md:text-4xl mb-12" style="font-family: var(--font-header);">
+                        Our Guiding Pillars
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div class="about-element bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+                            <img src="https://via.placeholder.com/150" alt="Faculty Coordinator" class="w-32 h-32 rounded-full mb-4 object-cover">
+                            <h4 class="text-2xl" style="font-family: var(--font-header);">Dr. Priya Hankare</h4>
+                            <p class="text-lg text-[var(--accent-blue)]" style="font-family: var(--font-body);">Faculty Co-ordinator</p>
+                        </div>
+                        <div class="about-element bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+                            <img src="https://via.placeholder.com/150" alt="HOD EXTC" class="w-32 h-32 rounded-full mb-4 object-cover">
+                            <h4 class="text-2xl" style="font-family: var(--font-header);">Dr. Jayashree Khanapuri</h4>
+                            <p class="text-lg text-[var(--accent-blue)]" style="font-family: var(--font-body);">HOD, EXTC Department</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="max-w-4xl mx-auto mt-20">
+                    <h2 class="about-element text-3xl md:text-4xl mb-8" style="font-family: var(--font-header);">
+                        Join Our Family
+                    </h2>
+                    <p class="about-element text-lg leading-relaxed mb-8">
+                        We are more than a committee; we are a community. A diverse family of creators, problem-solvers, and leaders, united by a shared passion for technology. Together, we learn, build, and grow.
+                    </p>
+                    <img src="https://via.placeholder.com/800x400" alt="IETE KJSIT Team Photo" class="about-element w-full rounded-lg shadow-2xl">
+                </div>
+        
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Observer.min.js"></script>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
